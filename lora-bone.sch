@@ -1,4 +1,5 @@
 EESchema Schematic File Version 2
+LIBS:lora-bone-rescue
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -45,7 +46,7 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L RFM95W U1
+L RFM95W-RESCUE-lora-bone U1
 U 1 1 59AAFD06
 P 9450 1650
 F 0 "U1" H 9400 1200 60  0000 C CNN
@@ -214,10 +215,10 @@ DIO1
 Text GLabel 3950 2050 2    60   Input ~ 0
 DIO2
 $Comp
-L CONN_COAXIAL ANT
+L CONN_COAXIAL ANT1
 U 1 1 59AB09FA
 P 10500 2000
-F 0 "ANT" H 10510 2120 50  0000 C CNN
+F 0 "ANT1" H 10510 2120 50  0000 C CNN
 F 1 "CONN_COAXIAL" V 10615 2000 50  0000 C CNN
 F 2 "Connect:SMA_THT_Jack_Straight" H 10500 2000 50  0001 C CNN
 F 3 "" H 10500 2000 50  0001 C CNN

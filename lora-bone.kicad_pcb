@@ -14,8 +14,8 @@
 
   (page A4)
   (layers
-    (0 F.Cu signal hide)
-    (31 B.Cu signal hide)
+    (0 F.Cu signal)
+    (31 B.Cu signal)
     (32 B.Adhes user)
     (33 F.Adhes user)
     (34 B.Paste user)
@@ -37,7 +37,7 @@
   )
 
   (setup
-    (last_trace_width 1)
+    (last_trace_width 0.25)
     (user_trace_width 0.5)
     (user_trace_width 1)
     (trace_clearance 0.2)
@@ -2087,7 +2087,22 @@
     )
   )
 
-  (module RFM95W:RFM95W_SMD (layer F.Cu) (tedit 59AC3A23) (tstamp 59AC3C33)
+  (module Mounting_Holes:MountingHole_3.2mm_M3_ISO14580 (layer F.Cu) (tedit 59AC9B40) (tstamp 59AC41A5)
+    (at 57.15 52.832)
+    (descr "Mounting Hole 3.2mm, no annular, M3, ISO14580")
+    (tags "mounting hole 3.2mm no annular m3 iso14580")
+    (fp_text reference REF** (at 0 -3.75) (layer F.SilkS) hide
+      (effects (font (size 1 1) (thickness 0.15)))
+    )
+    (fp_text value MountingHole_3.2mm_M3_ISO14580 (at 0 3.75) (layer F.Fab)
+      (effects (font (size 1 1) (thickness 0.15)))
+    )
+    (fp_circle (center 0 0) (end 2.75 0) (layer Cmts.User) (width 0.15))
+    (fp_circle (center 0 0) (end 3 0) (layer F.CrtYd) (width 0.05))
+    (pad 1 thru_hole circle (at 0 0) (size 3.2 3.2) (drill 3.2) (layers *.Cu *.Mask))
+  )
+
+  (module RFM95W:RFM95W_SMD (layer F.Cu) (tedit 59AD7E77) (tstamp 59AC3C33)
     (at 45.466 61.976 180)
     (path /59AAFD06)
     (fp_text reference U1 (at 0 1.27 180) (layer F.SilkS)
@@ -2097,9 +2112,7 @@
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_line (start -8 0) (end 8 0) (layer F.SilkS) (width 0.15))
-    (fp_line (start -8 -16) (end -8 0) (layer F.SilkS) (width 0.15))
     (fp_line (start 8 -16) (end -8 -16) (layer F.SilkS) (width 0.15))
-    (fp_line (start 8 0) (end 8 -16) (layer F.SilkS) (width 0.15))
     (pad 16 smd rect (at 7 -15 180) (size 3.1 1.2) (drill (offset 1 0)) (layers F.Cu F.Paste F.Mask)
       (net 21 DIO2))
     (pad 15 smd rect (at 7 -13 180) (size 3.1 1.2) (drill (offset 1 0)) (layers F.Cu F.Paste F.Mask)
@@ -2132,21 +2145,6 @@
       (net 10 MISO))
     (pad 1 smd rect (at -7 -15 180) (size 3.1 1.2) (drill (offset -1 0)) (layers F.Cu F.Paste F.Mask)
       (net 3 GND))
-  )
-
-  (module Mounting_Holes:MountingHole_3.2mm_M3_ISO14580 (layer F.Cu) (tedit 59AC9B40) (tstamp 59AC41A5)
-    (at 57.15 52.832)
-    (descr "Mounting Hole 3.2mm, no annular, M3, ISO14580")
-    (tags "mounting hole 3.2mm no annular m3 iso14580")
-    (fp_text reference REF** (at 0 -3.75) (layer F.SilkS) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (fp_text value MountingHole_3.2mm_M3_ISO14580 (at 0 3.75) (layer F.Fab)
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (fp_circle (center 0 0) (end 2.75 0) (layer Cmts.User) (width 0.15))
-    (fp_circle (center 0 0) (end 3 0) (layer F.CrtYd) (width 0.05))
-    (pad 1 thru_hole circle (at 0 0) (size 3.2 3.2) (drill 3.2) (layers *.Cu *.Mask))
   )
 
   (gr_text "U23 Projekt\n2017" (at 57.658 67.818 90) (layer F.SilkS) (tstamp 59AD74C6)
@@ -2761,7 +2759,7 @@
     (fill yes (arc_segments 16) (thermal_gap 0.508) (thermal_bridge_width 0.508))
     (polygon
       (pts
-        (xy 28.702 150.368) (xy 28.956 49.53) (xy 61.214 49.276) (xy 61.468 151.13) (xy 28.702 150.622)
+        (xy 29.972 149.86) (xy 29.972 50.038) (xy 59.944 50.038) (xy 59.944 149.86)
       )
     )
     (filled_polygon
@@ -3022,7 +3020,7 @@
     (fill yes (arc_segments 16) (thermal_gap 0.508) (thermal_bridge_width 0.508))
     (polygon
       (pts
-        (xy 28.702 152.146) (xy 28.194 48.514) (xy 61.468 47.752) (xy 61.976 152.146)
+        (xy 29.972 149.86) (xy 29.972 50.038) (xy 59.944 50.038) (xy 59.944 149.86)
       )
     )
     (filled_polygon
