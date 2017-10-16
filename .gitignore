@@ -1,2 +1,6 @@
 *.bak
 *-bak
+
+*.log
+*.aux
+svg-inkscape

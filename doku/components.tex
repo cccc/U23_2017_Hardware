@@ -1,0 +1,52 @@
+\documentclass[a4paper,ngerman,table]{article}
+
+\usepackage{babel}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{luainputenc}
+
+\usepackage{svg}
+\usepackage{xcolor}
+
+\begin{document}
+\section*{Lora-bone Adapterplatine}
+\subsection*{Bill of Materials}
+\rowcolors{2}{white}{gray!25}
+\begin{tabular}{|c|c|c|c|c|}
+	\hline
+	\textbf{Bauteil} & \textbf{Anzahl} & \textbf{Wert} & \textbf{Beschriftung} & \textbf{Beschreibung} \\
+	\hline
+	& 1 & & & Loraknoten PCB \\
+	\hline
+	U1 & 1 & RFM95W & RFM95W & Lora Funkmodul \\
+	\hline
+	& 1 & STM32F103C8 & STM32F103C8 & STM32 Board + Stiftleisten \\
+	\hline
+	J3, J6 & 2 & & & 20 Pin Buchsenleiste \\
+	\hline
+	J5, J7 & 2 & & & 4-Pin Stiftleisten, gerade \\
+	\hline
+	J1, J2, J8 & 3 & & & 4-Pin, Stiftleisten, gewinkelt \\
+	\hline
+	J4, J9 & 2 & & & 3-Pin, Stiftleisten, gewinkelt \\
+	\hline
+	J14 & 1 & & & 2-Pin, Stiftleiste, gewinkelt \\
+	\hline
+	R1 & 1 & $100 \textnormal{ k\Omega}$ & 1003 & Widerstand \\
+	\hline
+	R2, R3, R4 & 3 & $4,7 \textnormal{ k\Omega}$ & 472 & Widerstand \\
+	\hline
+	C1 & 1 & $100 \textnormal{ nF}$ & & Kondensator \\
+	\hline
+	Q1 & 1 & 2N7002 & A09T & N-Channel MOSFET \\
+	\hline
+
+\end{tabular}
+\subsection*{Bestückungsplan}
+\rowcolors{1}{white}{white}
+\begin{center}
+	\begin{tabular*}{\textwidth}{c p{3cm} c}
+		\includesvg{../components-front} & & \includesvg{../components-back}\\
+		Vorderseite & & Rückseite\\
+	\end{tabular*}
+\end{center}
+\end{document}
